@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "cheemstweaks",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "Cheem's tweaks",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "Alexander Betancourt"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.youtube.com/channel/UC83s4lbvECGHIIA6u3IdDfA",
+    "sources": "https://github.com/CheemsWithMemes/CheemsTweaks"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/cheemstweaks/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "cheem.tweaks.cheese.CheemsTweaks"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "cheemstweaks.mixins.json"
   ],
 
   "depends": {
