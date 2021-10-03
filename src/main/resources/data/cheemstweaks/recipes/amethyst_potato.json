@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#B#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:amethyst_block"
+        },
+        "B": {
+            "item": "minecraft:baked_potato"
+        }
+    },
+    "result": {
+        "item": "cheemstweaks:amethyst_potato",
+        "count": 1
+    }
+}
