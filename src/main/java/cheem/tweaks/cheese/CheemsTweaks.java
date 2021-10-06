@@ -26,6 +26,7 @@ public class CheemsTweaks implements ModInitializer {
 	public static final Item AMETHYST_POTATO = new Item(new Item.Settings().group(ItemGroup.FOOD).food(cheeseFoodComponets.AMETHYST_POTATO));
 	//Block Declarations
 	public static final Block RAW_SULFUR_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(4, 3).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES));
+	public static final Block SULFUR_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(5, 3).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES));
 	//Other Declarations
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
@@ -49,6 +50,7 @@ public class CheemsTweaks implements ModInitializer {
 
 		//Blocks
 		register_block("raw_sulfur_block", RAW_SULFUR_BLOCK, ItemGroup.BUILDING_BLOCKS);
+		register_block("sulfur_ore", SULFUR_ORE, ItemGroup.BUILDING_BLOCKS);
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
