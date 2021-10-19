@@ -24,12 +24,13 @@ public class CheemsTweaks implements ModInitializer {
 	public static final Item RAW_SULFUR = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 	public static final Item PURE_SULFUR = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 	public static final Item AMETHYST_POTATO = new Item(new Item.Settings().group(ItemGroup.FOOD).food(cheeseFoodComponets.AMETHYST_POTATO));
+	public static final Item DIAMOND_GLOW_BERRIES = new Item(new Item.Settings().group(ItemGroup.FOOD).food(cheeseFoodComponets.DIAMOND_GLOW_BERRIES));
 	//Block Declarations
 	public static final Block RAW_SULFUR_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(4, 3).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES));
 	public static final Block SULFUR_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(5, 3).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES));
 	//Other Declarations
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
-
+	
 
 	public static void register_item(String name_item, Item declaree) {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, name_item), declaree);
@@ -44,10 +45,14 @@ public class CheemsTweaks implements ModInitializer {
 	public void onInitialize() {
 		
 		//Items
+
+		//Ore Items
 		register_item("raw_sulfur", RAW_SULFUR);
 		register_item("pure_sulfur", PURE_SULFUR);
+		//Food Items
 		register_item("amethyst_potato", AMETHYST_POTATO);
-
+		register_item("diamond_glow_berries", DIAMOND_GLOW_BERRIES);
+		
 		//Blocks
 		register_block("raw_sulfur_block", RAW_SULFUR_BLOCK, ItemGroup.BUILDING_BLOCKS);
 		register_block("sulfur_ore", SULFUR_ORE, ItemGroup.BUILDING_BLOCKS);
