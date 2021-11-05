@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "cheemstweaks:raw_sulfur"
+        }
+    },
+    "result": {
+        "item": "cheemstweaks:raw_sulfur_block",
+        "count": 1
+    }
+}

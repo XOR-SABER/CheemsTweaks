@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "cheemstweaks:raw_sulfur"
+    },
+    "result": "cheemstweaks:pure_sulfur",
+    "experience": 0.2,
+    "cookingtime": 100
+}
