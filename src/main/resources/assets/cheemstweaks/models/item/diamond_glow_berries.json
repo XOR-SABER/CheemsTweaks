@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "cheemstweaks:item/diamond_glow_berries"
+        "layer0": "cheemstweaks:item/food/diamond_glow_berries"
     }
 }

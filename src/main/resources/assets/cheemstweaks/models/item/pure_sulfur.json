@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "cheemstweaks:item/pure_sulfur"
+        "layer0": "cheemstweaks:item/resources/pure_sulfur"
     }
 }

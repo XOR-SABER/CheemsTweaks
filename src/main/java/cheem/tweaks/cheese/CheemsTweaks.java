@@ -21,13 +21,35 @@ public class CheemsTweaks implements ModInitializer {
 	public static final String MOD_ID = "cheemstweaks";
 
 	//Item Declarations
-	public static final Item RAW_SULFUR = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
-	public static final Item PURE_SULFUR = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
-	public static final Item AMETHYST_POTATO = new Item(new Item.Settings().group(ItemGroup.FOOD).food(cheeseFoodComponets.AMETHYST_POTATO));
-	public static final Item DIAMOND_GLOW_BERRIES = new Item(new Item.Settings().group(ItemGroup.FOOD).food(cheeseFoodComponets.DIAMOND_GLOW_BERRIES));
+	public static final Item RAW_SULFUR = new Item(new Item
+	.Settings()
+	.group(ItemGroup.MATERIALS));
+	public static final Item PURE_SULFUR = new Item(new Item
+	.Settings()
+	.group(ItemGroup.MATERIALS));
+	
+	//Food Declarations
+	public static final Item AMETHYST_POTATO = new Item(new Item
+	.Settings()
+	.group(ItemGroup.FOOD)
+	.food(cheeseFoodComponets.AMETHYST_POTATO));
+	public static final Item DIAMOND_GLOW_BERRIES = new Item(new Item
+	.Settings()
+	.group(ItemGroup.FOOD)
+	.food(cheeseFoodComponets.DIAMOND_GLOW_BERRIES));
+
 	//Block Declarations
-	public static final Block RAW_SULFUR_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(4, 3).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES));
-	public static final Block SULFUR_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(5, 3).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES));
+	public static final Block RAW_SULFUR_BLOCK = new Block(FabricBlockSettings
+	.of(Material.STONE)
+	.strength(4, 3)
+	.sounds(BlockSoundGroup.STONE)
+	.breakByTool(FabricToolTags.PICKAXES));
+	public static final Block SULFUR_ORE = new Block(FabricBlockSettings
+	.of(Material.STONE)
+	.strength(5, 3)
+	.sounds(BlockSoundGroup.STONE)
+	.breakByTool(FabricToolTags.PICKAXES));
+
 	//Other Declarations
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 	
