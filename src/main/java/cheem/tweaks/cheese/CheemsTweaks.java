@@ -49,6 +49,11 @@ public class CheemsTweaks implements ModInitializer {
 	.strength(5, 3)
 	.sounds(BlockSoundGroup.STONE)
 	.breakByTool(FabricToolTags.PICKAXES));
+	public static final Block DEEPSLATE_SULFUR_ORE = new Block(FabricBlockSettings
+	.of(Material.STONE)
+	.strength(6, 4)
+	.sounds(BlockSoundGroup.STONE)
+	.breakByTool(FabricToolTags.PICKAXES));
 
 	//Other Declarations
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
@@ -71,6 +76,7 @@ public class CheemsTweaks implements ModInitializer {
 		//Ore Items
 		register_item("raw_sulfur", RAW_SULFUR);
 		register_item("pure_sulfur", PURE_SULFUR);
+
 		//Food Items
 		register_item("amethyst_potato", AMETHYST_POTATO);
 		register_item("diamond_glow_berries", DIAMOND_GLOW_BERRIES);
@@ -78,6 +84,7 @@ public class CheemsTweaks implements ModInitializer {
 		//Blocks
 		register_block("raw_sulfur_block", RAW_SULFUR_BLOCK, ItemGroup.BUILDING_BLOCKS);
 		register_block("sulfur_ore", SULFUR_ORE, ItemGroup.BUILDING_BLOCKS);
+		register_block("deepslate_sulfur_ore", DEEPSLATE_SULFUR_ORE, ItemGroup.BUILDING_BLOCKS);
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
