@@ -24,6 +24,11 @@ public class CheemsTweaks implements ModInitializer {
 	public static final Item RAW_SULFUR = new Item(new Item
 	.Settings()
 	.group(ItemGroup.MATERIALS));
+
+	public static final Item VINYL_SHARDS = new Item(new Item
+	.Settings()
+	.group(ItemGroup.MATERIALS));
+
 	public static final Item PURE_SULFUR = new Item(new Item
 	.Settings()
 	.group(ItemGroup.MATERIALS));
@@ -33,6 +38,7 @@ public class CheemsTweaks implements ModInitializer {
 	.Settings()
 	.group(ItemGroup.FOOD)
 	.food(cheeseFoodComponets.AMETHYST_POTATO));
+
 	public static final Item DIAMOND_GLOW_BERRIES = new Item(new Item
 	.Settings()
 	.group(ItemGroup.FOOD)
@@ -44,34 +50,50 @@ public class CheemsTweaks implements ModInitializer {
 	.strength(4, 3)
 	.sounds(BlockSoundGroup.STONE)
 	.breakByTool(FabricToolTags.PICKAXES));
+
 	public static final Block SULFUR_ORE = new Block(FabricBlockSettings
 	.of(Material.STONE)
 	.strength(5, 3)
 	.sounds(BlockSoundGroup.STONE)
 	.breakByTool(FabricToolTags.PICKAXES));
+
 	public static final Block DEEPSLATE_SULFUR_ORE = new Block(FabricBlockSettings
 	.of(Material.STONE)
 	.strength(6, 4)
 	.sounds(BlockSoundGroup.STONE)
 	.breakByTool(FabricToolTags.PICKAXES));
 
+	public static final Block UNREFINED_SULFUR_BLOCK = new Block(FabricBlockSettings
+	.of(Material.STONE)
+	.strength(5, 3)
+	.sounds(BlockSoundGroup.STONE)
+	.breakByTool(FabricToolTags.PICKAXES));
+
 	//Other Declarations
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
-	
 
 	public static void register_item(String name_item, Item declaree) {
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, name_item), declaree);
+		Registry.register(Registry.ITEM,
+		new Identifier(MOD_ID, name_item),
+		declaree);
 	}
 
 	public static void register_block(String name_block, Block declaree, ItemGroup item_group) {
-		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, name_block), declaree);
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, name_block), new BlockItem(declaree, new Item.Settings().group(item_group)));
+		Registry.register(Registry.BLOCK,
+		new Identifier(MOD_ID, name_block),
+		declaree);
+		Registry.register(Registry.ITEM,
+		new Identifier(MOD_ID, name_block),
+		new BlockItem(declaree,
+		new Item.Settings().
+		group(item_group)));
 	}
 
 	@Override
 	public void onInitialize() {
 		
 		//Items
+		register_item("vinyl_shards", VINYL_SHARDS);
 
 		//Ore Items
 		register_item("raw_sulfur", RAW_SULFUR);
@@ -85,6 +107,7 @@ public class CheemsTweaks implements ModInitializer {
 		register_block("raw_sulfur_block", RAW_SULFUR_BLOCK, ItemGroup.BUILDING_BLOCKS);
 		register_block("sulfur_ore", SULFUR_ORE, ItemGroup.BUILDING_BLOCKS);
 		register_block("deepslate_sulfur_ore", DEEPSLATE_SULFUR_ORE, ItemGroup.BUILDING_BLOCKS);
+		register_block("unrefined_sulfur_block", UNREFINED_SULFUR_BLOCK, ItemGroup.BUILDING_BLOCKS);
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.

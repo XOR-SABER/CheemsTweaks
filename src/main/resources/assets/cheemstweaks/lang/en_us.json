@@ -3,6 +3,9 @@
     "item.cheemstweaks.pure_sulfur": "Pure Sulfur",
     "item.cheemstweaks.amethyst_potato": "Amethyst Potato",
     "item.cheemstweaks.diamond_glow_berries": "Diamond Glow Berries",
+    "item.cheemstweaks.vinyl_shards": "Vinyl Shards",
     "block.cheemstweaks.raw_sulfur_block": "Block of Raw Sulfur",
-    "block.cheemstweaks.sulfur_ore": "Sulfur Ore"
+    "block.cheemstweaks.sulfur_ore": "Sulfur Ore",
+    "block.cheemstweaks.deepslate_sulfur_ore" : "Deepslate Sulfur Ore",
+    "block.cheemstweaks.unrefined_sulfur_block": "Unrefined Sulfur Block"
 }
