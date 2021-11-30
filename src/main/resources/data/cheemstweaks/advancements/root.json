@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "Something is off?"
+        },
+        "description": {
+            "text": "I can feel it.."
+        },
+        "icon": {
+            "item": "cheemstweaks:sulfur_ore"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "cheemstweaks:textures/block/unrefined_sulfur_block.png"
+    },
+    "criteria": {
+        "craftingplaced": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "block": "minecraft:crafting_table"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "craftingplaced"
+        ]
+    ]
+}

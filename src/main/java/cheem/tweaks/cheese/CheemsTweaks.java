@@ -10,6 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 import org.apache.logging.log4j.LogManager;
@@ -29,21 +30,44 @@ public class CheemsTweaks implements ModInitializer {
 	.Settings()
 	.group(ItemGroup.MATERIALS));
 
+	public static final Item EMPTY_JAR = new Item(new Item
+	.Settings()
+	.group(ItemGroup.MATERIALS));
+
 	public static final Item PURE_SULFUR = new Item(new Item
 	.Settings()
 	.group(ItemGroup.MATERIALS));
 	
+
 	//Food Declarations
 	public static final Item AMETHYST_POTATO = new Item(new Item
 	.Settings()
+	.maxCount(16)
 	.group(ItemGroup.FOOD)
+	.rarity(Rarity.EPIC)
 	.food(cheeseFoodComponets.AMETHYST_POTATO));
 
 	public static final Item DIAMOND_GLOW_BERRIES = new Item(new Item
 	.Settings()
+	.maxCount(16)
 	.group(ItemGroup.FOOD)
+	.rarity(Rarity.EPIC)
 	.food(cheeseFoodComponets.DIAMOND_GLOW_BERRIES));
 
+	public static final Item REDSTONE_JELLY = new Item(new Item
+	.Settings()
+	.maxCount(16)
+	.group(ItemGroup.FOOD)
+	.rarity(Rarity.EPIC)
+	.food(cheeseFoodComponets.REDSTONE_JELLY));
+
+	public static final Item BERRY_JELLY = new Item(new Item 
+	.Settings()
+	.maxCount(16)
+	.group(ItemGroup.FOOD)
+	.food(cheeseFoodComponets.BERRY_JELLY));
+
+	
 	//Block Declarations
 	public static final Block RAW_SULFUR_BLOCK = new Block(FabricBlockSettings
 	.of(Material.STONE)
@@ -94,6 +118,7 @@ public class CheemsTweaks implements ModInitializer {
 		
 		//Items
 		register_item("vinyl_shards", VINYL_SHARDS);
+		register_item("empty_jar", EMPTY_JAR);
 
 		//Ore Items
 		register_item("raw_sulfur", RAW_SULFUR);
@@ -102,6 +127,8 @@ public class CheemsTweaks implements ModInitializer {
 		//Food Items
 		register_item("amethyst_potato", AMETHYST_POTATO);
 		register_item("diamond_glow_berries", DIAMOND_GLOW_BERRIES);
+		register_item("redstone_jelly", REDSTONE_JELLY);
+		register_item("sweet_berry_jelly", BERRY_JELLY);
 		
 		//Blocks
 		register_block("raw_sulfur_block", RAW_SULFUR_BLOCK, ItemGroup.BUILDING_BLOCKS);

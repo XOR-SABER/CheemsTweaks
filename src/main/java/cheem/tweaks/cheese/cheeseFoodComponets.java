@@ -20,4 +20,16 @@ public class cheeseFoodComponets {
     .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 1200, 1), 1)
     .alwaysEdible()
     .build();
+    public static final FoodComponent REDSTONE_JELLY = (new FoodComponent.Builder())
+    .hunger(10)
+    .saturationModifier(0.1f)
+    .statusEffect(new StatusEffectInstance(StatusEffects.HASTE,300, 2), 1)
+    .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1600, 2), 1)
+    .alwaysEdible()
+    .build();
+    public static final FoodComponent BERRY_JELLY = (new FoodComponent.Builder())
+    .hunger(8)
+    .saturationModifier(0.2f)
+    .build();
+
 }
