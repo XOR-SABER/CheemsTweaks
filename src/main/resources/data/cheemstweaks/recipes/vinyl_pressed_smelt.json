@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "cheemstweaks:vinyl_shards"
+    },
+    "result": "cheemstweaks:blank_vinyl",
+    "experience": 2,
+    "cookingtime": 2000
+}

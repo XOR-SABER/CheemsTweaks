@@ -30,6 +30,10 @@ public class CheemsTweaks implements ModInitializer {
 	.Settings()
 	.group(ItemGroup.MATERIALS));
 
+	public static final Item BLANK_VINYL = new Item(new Item
+	.Settings()
+	.group(ItemGroup.MATERIALS));
+
 	public static final Item EMPTY_JAR = new Item(new Item
 	.Settings()
 	.group(ItemGroup.MATERIALS));
@@ -119,6 +123,7 @@ public class CheemsTweaks implements ModInitializer {
 		//Items
 		register_item("vinyl_shards", VINYL_SHARDS);
 		register_item("empty_jar", EMPTY_JAR);
+		register_item("blank_vinyl", BLANK_VINYL);
 
 		//Ore Items
 		register_item("raw_sulfur", RAW_SULFUR);

@@ -1,14 +1,14 @@
 {
-    "parent": "cheemstweaks:root",
+    "parent": "cheemstweaks:sulfur",
     "display": {
         "title": {
-            "text": "Sharded"
+            "text": "It stinks less now!"
         },
         "description": {
-            "text": "vinyl shards go BRRR!"
+            "text": "Refined the raw sulfur"
         },
         "icon": {
-            "item": "cheemstweaks:vinyl_shards"
+            "item": "cheemstweaks:pure_sulfur"
         },
         "frame": "task",
         "show_toast": true,
@@ -16,12 +16,12 @@
         "hidden": true
     },
     "criteria": {
-        "vinylstart": {
+        "sulfurpurify": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "items": ["cheemstweaks:vinyl_shards"]
+                        "items": ["cheemstweaks:pure_sulfur"]
                     }
                 ]
             }
@@ -29,7 +29,7 @@
     },
     "requirements": [
         [
-            "vinylstart"
+            "sulfurpurify"
         ]
     ]
 }
