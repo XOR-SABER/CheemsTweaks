@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#G#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:redstone_block"
+        },
+        "G": {
+            "item": "cheemstweaks:sweet_berry_jelly"
+        }
+    },
+    "result": {
+        "item": "cheemstweaks:redstone_jelly",
+        "count": 1
+    }
+}

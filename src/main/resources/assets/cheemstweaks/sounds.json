@@ -1,0 +1,34 @@
+{
+    "gunsfnf": {
+        "sounds": [
+            {
+              "name": "cheemstweaks:gunsfnf",
+              "stream": true
+            }
+          ]
+        },
+    "monsterfnf": {
+            "sounds": [
+                {
+                  "name": "cheemstweaks:monsterfnf",
+                  "stream": true
+                }
+              ]
+            },
+    "senpaifnf": {
+        "sounds": [
+            {
+                "name": "cheemstweaks:senpaifnf",
+                "stream": true
+            }
+        ]
+    },
+    "jack": {
+        "sounds": [
+            {
+                "name": "cheemstweaks:jack",
+                "stream": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/cube_bottom_top",
+    "textures": {
+        "bottom": "cheemstweaks:block/tinted_raw_sulfur_bottom",
+        "side": "cheemstweaks:block/tinted_raw_sulfur_side",
+        "top": "cheemstweaks:block/tinted_raw_sulfur_top"
+    }
+}

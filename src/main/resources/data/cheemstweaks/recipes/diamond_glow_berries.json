@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#G#",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:diamond"
+        },
+        "G": {
+            "item": "minecraft:glow_berries"
+        }
+    },
+    "result": {
+        "item": "cheemstweaks:diamond_glow_berries",
+        "count": 1
+    }
+}
