@@ -1,0 +1,35 @@
+{
+    "parent": "cheemstweaks:foods",
+    "display": {
+        "title": {
+            "text": "The lid!"
+        },
+        "description": {
+            "text": "TOUCHDOWN WOOO!"
+        },
+        "icon": {
+            "item": "cheemstweaks:sweet_berry_jelly"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "foodyberry": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["cheemstweaks:sweet_berry_jelly"]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "foodyberry"
+        ]
+    ]
+}

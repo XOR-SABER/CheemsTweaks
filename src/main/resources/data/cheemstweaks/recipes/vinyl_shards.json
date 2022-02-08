@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "minecraft:crying_obsidian"
+    },
+    "result": "cheemstweaks:vinyl_shards",
+    "experience": 0.1,
+    "cookingtime": 200
+}

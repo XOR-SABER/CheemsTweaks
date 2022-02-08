@@ -1,0 +1,35 @@
+{
+    "parent": "cheemstweaks:foods",
+    "display": {
+        "title": {
+            "text": "Why my potado purple!"
+        },
+        "description": {
+            "text": "No air = purple?"
+        },
+        "icon": {
+            "item": "cheemstweaks:amethyst_potato"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "foodypurple": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["cheemstweaks:amethyst_potato"]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "foodypurple"
+        ]
+    ]
+}

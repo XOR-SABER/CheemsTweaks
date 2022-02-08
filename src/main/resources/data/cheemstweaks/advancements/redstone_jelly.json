@@ -1,0 +1,35 @@
+{
+    "parent": "cheemstweaks:berry_jelly",
+    "display": {
+        "title": {
+            "text": "Strange Red Powder.."
+        },
+        "description": {
+            "text": "Cave Cocaine!"
+        },
+        "icon": {
+            "item": "cheemstweaks:redstone_jelly"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "foodyred": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["cheemstweaks:redstone_jelly"]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "foodyred"
+        ]
+    ]
+}

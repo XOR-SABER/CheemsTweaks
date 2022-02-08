@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#G#",
+        "GCG",
+        "#G#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:arrow"
+        },
+        "G": {
+            "item": "minecraft:gunpowder"
+        },
+        "C": {
+            "item": "cheemstweaks:blank_vinyl"
+        }
+    },
+    "result": {
+        "item": "cheemstweaks:music_guns",
+        "count": 1
+    }
+}

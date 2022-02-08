@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -14,7 +13,6 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.util.registry.Registry;
@@ -33,30 +31,8 @@ public class CheemsTweaks implements ModInitializer {
 
 	//Varible Declarations
 	public static final String MOD_ID = "cheemstweaks";
-
-	//Item Declarations
-	public static final Item RAW_SULFUR = new Item(new Item
-	.Settings()
-	.group(ItemGroup.MATERIALS));
-
-	public static final Item VINYL_SHARDS = new Item(new Item
-	.Settings()
-	.group(ItemGroup.MATERIALS));
-
-	public static final Item BLANK_VINYL = new Item(new Item
-	.Settings()
-	.group(ItemGroup.MATERIALS));
-
-	public static final Item EMPTY_JAR = new Item(new Item
-	.Settings()
-	.group(ItemGroup.MATERIALS));
-
-	public static final Item PURE_SULFUR = new Item(new Item
-	.Settings()
-	.group(ItemGroup.MATERIALS));
 	
 	//Sound events
-
 	public static final Identifier GUNS_ID = new Identifier("cheemstweaks:gunsfnf");
 	public static final Identifier MONSTER_ID = new Identifier("cheemstweaks:monsterfnf");
 	public static final Identifier SENPAI_ID = new Identifier("cheemstweaks:senpaifnf");
@@ -66,34 +42,6 @@ public class CheemsTweaks implements ModInitializer {
 	public static SoundEvent MONSTER_EVENT = new SoundEvent(MONSTER_ID);
 	public static SoundEvent SENPAI_EVENT = new SoundEvent(SENPAI_ID);
 	public static SoundEvent JACK_EVENT = new SoundEvent(JACK_ID);
-
-	//Food Declarations
-	public static final Item AMETHYST_POTATO = new Item(new Item
-	.Settings()
-	.maxCount(16)
-	.group(ItemGroup.FOOD)
-	.rarity(Rarity.EPIC)
-	.food(cheeseFoodComponets.AMETHYST_POTATO));
-
-	public static final Item DIAMOND_GLOW_BERRIES = new Item(new Item
-	.Settings()
-	.maxCount(16)
-	.group(ItemGroup.FOOD)
-	.rarity(Rarity.EPIC)
-	.food(cheeseFoodComponets.DIAMOND_GLOW_BERRIES));
-
-	public static final Item REDSTONE_JELLY = new ItemJelly(new Item
-	.Settings()
-	.maxCount(16)
-	.group(ItemGroup.FOOD)
-	.rarity(Rarity.EPIC)
-	.food(cheeseFoodComponets.REDSTONE_JELLY));
-
-	public static final Item BERRY_JELLY = new ItemJelly(new Item 
-	.Settings()
-	.maxCount(16)
-	.group(ItemGroup.FOOD)
-	.food(cheeseFoodComponets.BERRY_JELLY));
 
 	//Block Declarations
 	public static final Block RAW_SULFUR_BLOCK = new Block(FabricBlockSettings
@@ -171,28 +119,18 @@ public class CheemsTweaks implements ModInitializer {
 		Registry.register(Registry.SOUND_EVENT, CheemsTweaks.SENPAI_ID, SENPAI_EVENT);
 		Registry.register(Registry.SOUND_EVENT, CheemsTweaks.MONSTER_ID, MONSTER_EVENT);
 		Registry.register(Registry.SOUND_EVENT, CheemsTweaks.JACK_ID, JACK_EVENT);
-
-		//Items
-		register_item("vinyl_shards", VINYL_SHARDS);
-		register_item("empty_jar", EMPTY_JAR);
-		register_item("blank_vinyl", BLANK_VINYL);
-
-		//Ore Items
-		register_item("raw_sulfur", RAW_SULFUR);
-		register_item("pure_sulfur", PURE_SULFUR);
-
-		//Food Items
-		register_item("amethyst_potato", AMETHYST_POTATO);
-		register_item("diamond_glow_berries", DIAMOND_GLOW_BERRIES);
-		register_item("redstone_jelly", REDSTONE_JELLY);
-		register_item("sweet_berry_jelly", BERRY_JELLY);
 		
+
 		//Blocks
 		register_block("raw_sulfur_block", RAW_SULFUR_BLOCK, ItemGroup.BUILDING_BLOCKS);
 		register_block("tinted_raw_sulfur_block", TINTED_RAW_SULFUR_BLOCK, ItemGroup.BUILDING_BLOCKS);
 		register_block("sulfur_ore", SULFUR_ORE, ItemGroup.BUILDING_BLOCKS);
 		register_block("deepslate_sulfur_ore", DEEPSLATE_SULFUR_ORE, ItemGroup.BUILDING_BLOCKS);
 		register_block("unrefined_sulfur_block", UNREFINED_SULFUR_BLOCK, ItemGroup.BUILDING_BLOCKS);
+
+		creatediscitem.init();
+		createfooditem.init();
+		createitem.init();
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
@@ -206,7 +144,7 @@ public class CheemsTweaks implements ModInitializer {
 		new Identifier("cheemstweaks", "deepslate_sulfur_ore_overworld"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, deepslate_sulfur_ore_Overworld.getValue(),DEEPSLATE_SULFUR_ORE_OVERWORLD);
 		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, deepslate_sulfur_ore_Overworld);
-		creatediscitem.init();
+
 		LOGGER.info("Cheems Tweaks loaded!");
 	}
 }

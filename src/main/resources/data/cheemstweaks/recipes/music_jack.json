@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "## ",
+        "#CG",
+        "#F "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:rotten_flesh"
+        },
+        "C": {
+            "item": "cheemstweaks:blank_vinyl"
+        },
+        "G": {
+            "item": "minecraft:golden_apple"
+        },
+        "F": {
+            "item": "minecraft:fermented_spider_eye"
+        }
+    },
+    "result": {
+        "item": "cheemstweaks:music_jack",
+        "count": 1
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "parent": "cheemstweaks:foods",
+    "display": {
+        "title": {
+            "text": "Why my berry blue?!"
+        },
+        "description": {
+            "text": "I wasted 4 Diamonds"
+        },
+        "icon": {
+            "item": "cheemstweaks:diamond_glow_berries"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "foodyblue": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["cheemstweaks:diamond_glow_berries"]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "foodyblue"
+        ]
+    ]
+}

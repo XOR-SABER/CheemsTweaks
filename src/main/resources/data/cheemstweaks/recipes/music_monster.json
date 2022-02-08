@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#g#",
+        "gCg",
+        "ggg"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:redstone_block"
+        },
+        "g": {
+            "item": "cheemstweaks:raw_sulfur"
+        },
+        "C": {
+            "item": "cheemstweaks:blank_vinyl"
+        }
+    },
+    "result": {
+        "item": "cheemstweaks:music_monster",
+        "count": 1
+    }
+}

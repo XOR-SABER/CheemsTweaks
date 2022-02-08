@@ -1,0 +1,35 @@
+{
+    "parent": "cheemstweaks:sulfur_combine",
+    "display": {
+        "title": {
+            "text": "It blue?!"
+        },
+        "description": {
+            "text": "Refined the raw sulfur block"
+        },
+        "icon": {
+            "item": "cheemstweaks:tinted_raw_sulfur_block"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "sulfurblue": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["cheemstweaks:tinted_raw_sulfur_block"]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "sulfurblue"
+        ]
+    ]
+}

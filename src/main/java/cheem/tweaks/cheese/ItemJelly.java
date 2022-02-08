@@ -2,6 +2,7 @@ package cheem.tweaks.cheese;
 
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -22,15 +23,18 @@ public class ItemJelly extends Item {
 
 	public ItemStack finishUsing(ItemStack itemStack, World world, LivingEntity livingEntity) {
 		if (livingEntity instanceof PlayerEntity) {
-			PlayerEntity player = (PlayerEntity) livingEntity;
-			player.getHungerManager().eat(itemStack.getItem(), itemStack);
-			player.incrementStat(Stats.USED.getOrCreateStat(itemStack.getItem()));
-			
+				PlayerEntity player = (PlayerEntity) livingEntity;
+				player.getHungerManager().eat(itemStack.getItem(), itemStack);
+				for(int i = 0; i < itemStack.getItem().getFoodComponent().getStatusEffects().size(); i++){
+					StatusEffectInstance current = itemStack.getItem().getFoodComponent().getStatusEffects().get(i).getFirst();
+					player.addStatusEffect(new StatusEffectInstance(current.getEffectType(), current.getDuration(), current.getAmplifier()));
+				}
+				player.incrementStat(Stats.USED.getOrCreateStat(itemStack.getItem()));
 			if (player instanceof ServerPlayerEntity) {
 				Criteria.CONSUME_ITEM.trigger((ServerPlayerEntity) player, itemStack);
 			}
 			
-			player.giveItemStack(new ItemStack(CheemsTweaks.EMPTY_JAR));
+			player.giveItemStack(new ItemStack(createitem.EMPTY_JAR));
 		}
 		
 		itemStack.decrement(1);
