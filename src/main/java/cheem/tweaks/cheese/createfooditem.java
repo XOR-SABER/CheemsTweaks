@@ -19,6 +19,7 @@ public class createfooditem {
         Item.Settings settings = new Item.Settings().maxCount(max_count).rarity(type).food(component).group(ItemGroup.FOOD);
         return Registry.register(Registry.ITEM, new Identifier(CheemsTweaks.MOD_ID, id), new Item(settings));
     }
+    //I think of it like a Macro in C
     public static Item registerJelly(String id, int max_count, Rarity type, FoodComponent component){
         ItemJelly.Settings settings = new ItemJelly.Settings().maxCount(max_count).rarity(type).food(component).group(ItemGroup.FOOD);
         return Registry.register(Registry.ITEM, new Identifier(CheemsTweaks.MOD_ID, id), new ItemJelly(settings));
